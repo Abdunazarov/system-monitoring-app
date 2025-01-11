@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Системный Мониторинг</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Системный Мониторинг</h1>
+        <div class="metrics">
+            <p><strong>ЦП:</strong> <span id="cpu">-</span>%</p>
+            <p><strong>ОЗУ:</strong> <span id="ram_free">-</span>MB / <span id="ram_total">-</span>MB</p>
+            <p><strong>ПЗУ:</strong> <span id="disk_free">-</span>MB / <span id="disk_total">-</span>MB</p>
+        </div>
+        <button id="start">Начать запись</button>
+        <button id="stop" style="display: none;">Остановить</button>
+        <p id="timer"></p>
+        <button id="history">История записей</button>
+        <div id="history-container" class="history-container" style="display: none;">
+            <h2>История записей</h2>
+            <table id="history-table">
+                <tr>
+                    <th>Время</th>
+                    <th>ЦП (%)</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="/static/script.js"></script> 
+</body>
+</html>
